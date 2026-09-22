@@ -1,0 +1,28 @@
+-- Student Number: 22603770
+-- Name: Lucas Zhan
+-- Class: LD01CIDA01
+-- Date: 2026-09-22
+
+USE ULHT_DB26;
+GO
+
+-- A1
+SELECT TOP 5
+    EMPLOYEE_ID,
+    CONCAT(UPPER(LAST_NAME), ', ' ,LOWER(FIRST_NAME)) AS "formale_name"
+FROM HR.EMPLOYEES;
+
+-- A2
+SELECT TOP 5
+    EMPLOYEE_ID,
+    LOWER(CONCAT(LOWER(EMAIL), '@example.org')) AS email_address
+FROM HR.EMPLOYEES
+ORDER BY EMPLOYEE_ID ASC;
+
+-- A3
+SELECT TOP 5 
+    LAST_NAME, 
+    LEN(LAST_NAME) AS last_name_length
+FROM HR.EMPLOYEES
+ORDER BY last_name_length DESC, LAST_NAME ASC;
+
