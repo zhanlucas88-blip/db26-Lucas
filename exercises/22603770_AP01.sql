@@ -2,7 +2,6 @@
 -- Name: Lucas Zhan
 -- Class: LCD
 -- Date: 2026-09-16
-
 -- A1
 SELECT DB_NAME() AS current_database;
 
@@ -10,6 +9,7 @@ SELECT DB_NAME() AS current_database;
 SELECT *
 FROM INFORMATION_SCHEMA.TABLES
 WHERE TABLE_SCHEMA = 'HR';
+
 
 -- A3
 SELECT TOP 1 *

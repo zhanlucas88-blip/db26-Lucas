@@ -1,0 +1,19 @@
+-- Student Number: 22603770
+-- Name: Lucas Zhan
+-- Class: LCD
+-- Date: 2026-10-06
+
+SELECT *
+FROM INFORMATION_SCHEMA.TABLES
+
+SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_SCHEMA = 'production' AND TABLE_NAME = 'review_queue'
+ORDER BY ORDINAL_POSITION;
+
+CREATE TABLE production.review_queue(
+    product_id INT NOT NULL,
+    review_note NVARCHAR(200) NULL ,
+    score DECIMAL(10,2) NULL,
+    review_date DATA NOT NULL
+);
